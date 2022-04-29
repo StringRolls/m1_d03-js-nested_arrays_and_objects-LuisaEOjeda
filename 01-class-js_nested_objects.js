@@ -1,23 +1,51 @@
 // Class code examples
-
-const student1 = {name: "Bob", age: 17}
-const student2 = {name: "Susy", age: 18}
-const student3 = {name: "Ted", age: 18}
+/*
+const student1 = { name: "Bob", age: 17 };
+const student2 = { name: "Susy", age: 18 };
+const student3 = { name: "Ted", age: 18 };
 
 const students = [
-    {name: "Bob", age: 17},
-    {name: "Susy", age: 18},
-    {name: "Ted", age: 18}
-]
+  { name: "Bob", age: 17 },
+  { name: "Susy", age: 18 },
+  { name: "Ted", age: 18 },
+];
 
-console.log(students[1])
+console.log(students[1]);
+console.log(students[1].age);
 
-console.log(students[1].age)
-console.log(students[students.indexOf("Susy")]) // Thsi will not work
+console.log(students[1].age);
+console.log(students[students.indexOf("Susy")]); // Thsi will not work
 
-const Bob = {name: "Bob", age: 17}
-const Susy = {name: "Susy", age: 18}
-const Ted = {name: "Ted", age: 18}
+const Bob = { name: "Bob", age: 17 };
+const Susy = { name: "Susy", age: 18 };
+const Ted = { name: "Ted", age: 18 };
+const Aleix = { name: "Aleix", age: 20 };
+const Marco = { name: "Marco", age: 18 };
+
+const studentsDictionary = {
+  Bob: Bob,
+  Susy,
+  Ted,
+  Aleix,
+  Marco,
+};
+
+console.log(studentsDictionary.Susy.age)
+
+//LOOP thorugh the object
+
+// for ... in the
+
+for(const student in studentsDictionary){
+    console.log(studentsDictionary[student])
+}
+
+// for ... of
+
+for (const student of studentsList){
+    console.log(student.age)
+}
+
 
 const studentsObj = {
     Bob: {name: "Bob", age: 17},
@@ -38,8 +66,11 @@ const classroom = {
 
 console.log(classroom.carlos.friends.length)
 
+classroom.friends.push()
+
 for(const friend of classroom.carol.friends) console.log(friend.name)
 
+*/
 
 // Example 2
 
@@ -60,6 +91,15 @@ for(const friend of classroom.carol.friends) console.log(friend.name)
         }
     ]
 
+for (const drink of drinks){
+    
+for (const ingredient of drinks[0].ingredients){
+
+    console.log(`One ingredient of ${drink.name}: `, ingredient)
+}
+}
+
+    /*
     // Array of objects iteration
     for (let i = 0; i < drinks.length; i++) {
 
@@ -75,3 +115,4 @@ for(const friend of classroom.carol.friends) console.log(friend.name)
         console.log(`The drink ${drink.name} weight ${drink.weight}. The ingredients are:`)
         drink.ingredients.forEach(ing => console.log('- ', ing))
     })
+*/
